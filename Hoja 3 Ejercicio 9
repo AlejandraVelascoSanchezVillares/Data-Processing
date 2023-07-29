@@ -1,0 +1,19 @@
+def f(x):
+    return(x**4-1)
+def derf(x):
+    return(4*(x**3))
+
+def newton(f,derf,x0,eps,maxi):
+    cont=maxi
+    xk=x0
+    while((cont>=0) and (abs(f(xk))<eps)):
+        cont=(cont-1)
+        if(derf(xk)!=0):
+            xk=(xk-((f(xk))/(derf(xk))))
+        else:
+            cont=-1
+    return(xk,cont)
+
+
+
+    
